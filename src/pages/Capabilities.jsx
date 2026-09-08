@@ -28,7 +28,7 @@ export default function Capabilities() {
     <>
       <Seo
         title={title}
-        description="CNC milling, CNC turning, fabricating and assembly in house, plus plating, sheet metal, welding and centerless grinding through trusted vendors for a total turnkey option."
+        description="CNC milling, turning, fabricating and assembly in house, plus plating, sheet metal, welding and centerless grinding through trusted vendors."
       />
       <PageHeader title="CNC Machine Shop Services and Capabilities" intro={servicesIntro} />
 

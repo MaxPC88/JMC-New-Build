@@ -29,8 +29,13 @@ dd {
   margin: 0;
 }
 
-ul[class],
-ol[class] {
+/* Lists that carry a class are assumed to be UI, not prose, so they lose
+   their markers and indentation.
+
+   Wrapped in :where() so this contributes zero specificity. Without it,
+   `ul[class]` (0,1,1) outranks any single-class component rule (0,1,0) and
+   silently overrides padding set on the component itself. */
+:where(ul[class], ol[class]) {
   margin: 0;
   padding: 0;
   list-style: none;

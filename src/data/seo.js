@@ -12,8 +12,6 @@
 
 import { company } from './company.js'
 
-export const siteName = company.shortName
-
 /** Verbatim from the existing site's <meta name="description">. */
 export const defaultDescription =
   'Jones Machine Company, Inc is a New England based, full service machine shop specializing in CNC Milling and Turning'
@@ -29,8 +27,9 @@ export const siteUrl = 'https://www.jonesmachineco.com'
  * Titles only for now; descriptions are added alongside page content.
  */
 export const pageMeta = {
+  /* Kept under ~60 characters so search results do not truncate it. */
   '/': {
-    title: `${company.name} | CNC Machine Shop in Danvers, Massachusetts`,
+    title: `${company.shortName} | CNC Machine Shop in Danvers, MA`,
     isHome: true,
   },
   '/about': { title: 'About Us' },

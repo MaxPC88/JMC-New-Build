@@ -10,7 +10,7 @@
 .quoteNote {
   padding: var(--space-5);
   background-color: var(--color-surface-alt);
-  border-left: var(--border-width-thick) solid var(--color-navy-800);
+  border-left: var(--border-width-thick) solid var(--color-border-strong);
   border-radius: var(--radius-sm);
 }
 

@@ -3,7 +3,7 @@ import CtaBanner from '../components/ui/CtaBanner.jsx'
 import EquipmentList from '../components/ui/EquipmentList.jsx'
 import PageHeader from '../components/ui/PageHeader.jsx'
 import Section from '../components/ui/Section.jsx'
-import { equipmentCategories, equipmentItemCount } from '../data/equipment.js'
+import { equipmentCategories } from '../data/equipment.js'
 import styles from './Equipment.module.css'
 
 const title = 'Equipment & Facilities'
@@ -21,11 +21,11 @@ export default function Equipment() {
     <>
       <Seo
         title={title}
-        description="The complete Jones Machine Company equipment list: CNC milling machines, lathes, grinders, inspection equipment and support machinery in Danvers, Massachusetts."
+        description="Jones Machine Company equipment list: milling machines, lathes, grinders, inspection equipment, presses, benders and saws in Danvers, Massachusetts."
       />
       <PageHeader
         title="CNC Milling and Turning Machine Shop Facilities List"
-        intro={`Our full capital equipment schedule — ${equipmentItemCount} listed machines and systems across ${equipmentCategories.length} categories.`}
+        intro="Use the links below to jump to a category."
       />
 
       <Section>
@@ -36,9 +36,6 @@ export default function Equipment() {
               <li key={category.id}>
                 <a href={`#${category.id}`} className={styles.jumpLink}>
                   {category.name}
-                  <span className={styles.jumpCount}>
-                    {category.items.length}
-                  </span>
                 </a>
               </li>
             ))}

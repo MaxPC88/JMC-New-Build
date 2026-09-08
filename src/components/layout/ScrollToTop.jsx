@@ -14,15 +14,18 @@ export default function ScrollToTop() {
   const { pathname, hash } = useLocation()
 
   useEffect(() => {
+    /* Explicitly instant. The stylesheet enables smooth scrolling for in-page
+       anchor clicks, but a page change should land at the top immediately
+       rather than animating through the previous page's content. */
     if (hash) {
       const target = document.querySelector(hash)
       if (target) {
-        target.scrollIntoView()
+        target.scrollIntoView({ behavior: 'instant', block: 'start' })
         return
       }
     }
 
-    window.scrollTo(0, 0)
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' })
   }, [pathname, hash])
 
   return null

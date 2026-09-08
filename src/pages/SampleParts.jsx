@@ -21,7 +21,7 @@ export default function SampleParts() {
     <>
       <Seo
         title={title}
-        description="Examples of precision milled and turned machine parts produced by Jones Machine Company in Danvers, Massachusetts."
+        description="Sample milled and turned machine parts from Jones Machine Company in Danvers, Massachusetts."
       />
       <PageHeader title={samplePartsHeading} />
 

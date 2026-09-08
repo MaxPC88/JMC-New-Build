@@ -13,7 +13,7 @@ export default function CustomProducts() {
     <>
       <Seo
         title={title}
-        description="Custom products made by Jones Machine Company for a variety of industries, proudly made in the USA: anodized aluminum cribbage boards, tool holder racks and bench top tool changers."
+        description="Custom products proudly made in the USA: anodized aluminum cribbage boards, tool holder racks and bench top tool changers."
       />
       <PageHeader title="Custom Products for Sale" intro={productsIntro} />
 

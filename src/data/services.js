@@ -31,7 +31,9 @@ export const turnkeyServices = [
 export const recommendedVendors = [
   {
     name: 'Circle Finishing',
-    href: 'http://www.circlefinishing.com/',
+    /* Source links http://www.circlefinishing.com/, which now redirects to
+       https://circlefinishing.com/. Linking the destination directly. */
+    href: 'https://circlefinishing.com/',
     description:
       'Specializes in high-quality anodize, chromate and passivate finishes.',
   },

@@ -29,8 +29,10 @@
   font-size: var(--font-size-lg);
 }
 
+/* Link colour at rest, not just on hover — the card must read as clickable
+   without the visitor having to point at it first. */
 .titleLink {
-  color: var(--color-heading);
+  color: var(--color-link);
   text-decoration: none;
 }
 
@@ -52,20 +54,21 @@
   color: var(--color-text);
 }
 
-/* Linked cards get a clear, non-color-dependent hover and focus treatment:
-   the left edge thickens in addition to the border darkening. */
+/* A navy left edge marks a card as interactive at rest. Static chip lists
+   elsewhere use a steel edge, so navy consistently means "this is a link". */
 .linked {
-  border-left: var(--border-width-thick) solid var(--color-border-strong);
+  border-left: var(--border-width-thick) solid var(--color-navy-800);
   transition:
     border-color var(--transition-base),
     background-color var(--transition-base);
 }
 
 .linked:hover {
-  border-left-color: var(--color-navy-800);
   background-color: var(--color-surface-alt);
+  border-color: var(--color-border-strong);
+  border-left-color: var(--color-navy-900);
 }
 
 .linked:focus-within {
-  border-left-color: var(--color-navy-800);
+  border-left-color: var(--color-navy-900);
 }

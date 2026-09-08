@@ -18,7 +18,7 @@ export const millingMachines = [
        and the facilities list both say D28. Using D28. Flagged for owners. */
     name: '2025 FANUC D28 LiB5 ADV Plus 500 CNC Robo Drill',
     image: '/images/milling/fanuc-d28-2025.jpg',
-    alt: 'FANUC D28 LiB5 ADV Plus 500 CNC Robo Drill on the shop floor at Jones Machine Company',
+    alt: 'FANUC D28 LiB5 ADV Plus 500 CNC Robo Drill',
     description:
       'The 2025 FANUC D28 LiB5 ADV Plus 500 CNC Robo Drill features travels of X 27.56", Y 19.68", and Z 15.74" for increased machining capacity. Equipped with a 28 tool changer and 24K RPM spindle, this machine delivers high speed and precision performance for demanding production work. Also includes Renishaw tool and spindle probes for improved setup accuracy and repeatability.',
   },
@@ -52,7 +52,7 @@ export const millingMachines = [
     id: 'fanuc-robot-cell',
     name: '2020 FANUC D21SiB5 ADV Robo Drill / Robot Cell',
     image: '/images/milling/fanuc-robot-cell.jpg',
-    alt: 'FANUC D21SiB5 ADV Robo Drill paired with an automated robot cell',
+    alt: 'FANUC D21SiB5 ADV Robo Drill / Robot Cell',
     description:
       'Introducing our latest investment in future machining and technology. The Robo Drill machine has the following capabilities: 24K Direct Drive high torque spindle with a capacity of X & Y travel of 11.8" and a Z travel of 15.74. With a high speed control, this allows us the capability to use Trochoidal machining practices. The Robot Cell gives us the advantage to run lights out, keeping overhead low and quick turnarounds.',
   },
@@ -68,7 +68,7 @@ export const millingMachines = [
     id: 'robo-drill-row',
     name: 'Robo Drills',
     image: '/images/milling/robo-drill-row.jpg',
-    alt: 'A row of six FANUC Robo Drill milling machines in the Jones Machine Company shop',
+    alt: 'A row of six Robo Drill milling machines',
     description:
       'With 6 Robo drills in a row 2 or 3 operators can set up and operate all the machines. This keeps our overhead low and pricing competitive.',
   },

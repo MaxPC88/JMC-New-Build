@@ -10,6 +10,7 @@ import Prose from '../components/ui/Prose.jsx'
 import Section from '../components/ui/Section.jsx'
 import SectionHeader from '../components/ui/SectionHeader.jsx'
 import { company } from '../data/company.js'
+import { fastResponseCta } from '../data/callsToAction.js'
 import { facilityImage, homeIntro, industries } from '../data/about.js'
 import { capabilityAreas } from '../data/services.js'
 import { qualityHighlights } from '../data/quality.js'
@@ -37,7 +38,7 @@ export default function Home() {
         <Container>
           <div className={styles.heroInner}>
             <p className={`${styles.eyebrow} u-label`}>
-              Serving industry since {company.foundedYear}
+              Since {company.foundedYear}
             </p>
             <h1 className={styles.heroTitle}>
               Full Service CNC Milling and Turning Machine Shop Providing
@@ -75,6 +76,8 @@ export default function Home() {
             {homeIntro.map((paragraph) => (
               <p key={paragraph.slice(0, 40)}>{paragraph}</p>
             ))}
+            {/* Third paragraph of index.html — the quoting invitation. */}
+            <p>{fastResponseCta.text}</p>
             <p>
               <Button to="/about" variant="text">
                 More about Jones Machine Company

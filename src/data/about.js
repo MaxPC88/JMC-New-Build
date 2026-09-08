@@ -53,5 +53,8 @@ export const companyFacts = [
 
 export const facilityImage = {
   src: '/images/facility/building-exterior.jpg',
-  alt: 'The Jones Machine Company building at 4 Canal Street in Danvers, Massachusetts',
+  /* Original alt was simply "Jones Machine". The building sign reads JONES
+     MACHINE CO. INC.; the source never ties this photograph to a street
+     address, so none is asserted here. */
+  alt: 'The Jones Machine Company building',
 }

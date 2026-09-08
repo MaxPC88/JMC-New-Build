@@ -15,7 +15,7 @@
   padding: var(--space-5);
   background-color: var(--color-surface);
   border: var(--border-width) solid var(--color-border);
-  border-left: var(--border-width-thick) solid var(--color-navy-800);
+  border-left: var(--border-width-thick) solid var(--color-border-strong);
   border-radius: var(--radius-sm);
 }
 

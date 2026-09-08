@@ -18,16 +18,11 @@ export const primaryNav = [
   { label: 'Contact', to: '/contact' },
 ]
 
-/**
- * Sub-pages surfaced as cards on the /capabilities hub page rather than in a
- * dropdown menu, so navigation never depends on hover.
+/*
+ * The capability sub-pages are surfaced as cards on the /capabilities hub
+ * rather than in a dropdown, so navigation never depends on hover. That list
+ * lives with its descriptions in `capabilityAreas` in data/services.js.
  */
-export const capabilitiesNav = [
-  { label: 'Precision CNC Milling', to: '/capabilities/milling' },
-  { label: 'Precision CNC Turning', to: '/capabilities/turning' },
-  { label: 'Packaging & Bagging', to: '/capabilities/packaging' },
-  { label: 'Custom Products', to: '/custom-products' },
-]
 
 /** Footer link columns. Carries the secondary routes kept out of the header. */
 export const footerNav = [

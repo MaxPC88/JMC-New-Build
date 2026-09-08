@@ -25,7 +25,9 @@
   --color-ink: #1a1d21;
   --color-steel-700: #3f4a55;
   --color-steel-600: #55606d;
-  --color-steel-500: #6b7785;
+  /* Darkened from #6b7785, which measured 4.21:1 on white and failed WCAG AA
+     for the small label text that uses it. Now ~5.2:1. */
+  --color-steel-500: #5c6773;
   --color-steel-300: #b8c0c9;
   --color-steel-200: #dde2e7;
   --color-steel-100: #edf0f3;
@@ -64,7 +66,10 @@
 
   /* Deliberately restrained scale. Body copy is large and readable;
      headings stay proportionate rather than dominating the page. */
-  --font-size-xs: 0.8125rem; /* 13px — captions, legal */
+  /* Nothing on the site is set below 14px. The audience skews older, and 13px
+     labels were the smallest text on the page — the extra pixel costs nothing
+     and materially improves legibility. */
+  --font-size-xs: 0.875rem; /* 14px — labels, captions, legal */
   --font-size-sm: 0.9375rem; /* 15px — utility bar, footer */
   --font-size-base: 1.0625rem; /* 17px — body copy */
   --font-size-md: 1.1875rem; /* 19px — page intros */

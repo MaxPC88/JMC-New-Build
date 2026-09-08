@@ -32,7 +32,7 @@ export const customProducts = [
     id: 'bench-top-tool-changer',
     name: 'Bench Top Tool Changer',
     image: '/images/products/bench-top-tool-changer.jpg',
-    alt: 'Bench top tool changer holding 30 taper tool holders',
+    alt: 'Bench top tool changer for a 30 tapered tool',
     description:
       'Bench Top Tool Changer Pictured here the bench is used for a 30 tapered tool. Easily mounted to a bench using 8 wood screws. Great space saver and allows for quick view of holders and fast change outs.',
   },
@@ -50,15 +50,15 @@ export const samplePartsHeading = 'Sample Milled and Turned Machine Parts'
 export const sampleParts = [
   {
     src: '/images/parts/machined-parts-01.jpg',
-    alt: 'An assortment of precision milled and turned metal parts',
+    alt: 'Milled and turned machine parts',
   },
   {
     src: '/images/parts/machined-parts-02.jpg',
-    alt: 'Machined components in a range of sizes and finishes',
+    alt: 'Milled and turned machine parts',
   },
   {
     src: '/images/parts/machined-parts-03.jpg',
-    alt: 'A wide selection of turned machine parts produced at Jones Machine Company',
+    alt: 'Sample turned machine parts',
     wide: true,
   },
 ]
@@ -67,15 +67,17 @@ export const sampleParts = [
    News and awards — news.html
    --------------------------------------------------------------------------- */
 
+/* Source reads "...accredited including: NASANASA." — the duplicated word is
+   a typo in the original; the reference to NASA itself is kept. */
 export const newsIntro =
-  'Jones Machine has worked on several special projects for which we are proud to have been accredited.'
+  'Jones Machine has worked on several special projects for which we are proud to have been accredited, including NASA.'
 
 export const awards = [
   {
     id: 'nasa-group-achievement',
     title: 'NASA Group Achievement Award',
     image: '/images/news/nasa-award.jpg',
-    alt: 'NASA insignia',
+    alt: 'NASA',
     description:
       'The National Aeronautics and Space Administration has awarded Jones Machine the Group Achievement Award for our outstanding accomplishments and contribution to the highly successful Airborne Antarctic Ozone Equipment performed at Punta Arenas, Chile. This project has been a huge success in exploring the effects of ozone depletion, which impacts us today with global warming.',
   },
@@ -93,9 +95,6 @@ export const awards = [
 
 export const careersIntro =
   'Jones Machine is always looking to hire skilled machinists and other individuals to join our team.'
-
-export const careersContactNote =
-  'Please contact our main office by email or by phone.'
 
 export const benefitsIntro = 'We offer a competitive benefits package which includes:'
 

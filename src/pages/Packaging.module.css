@@ -1,20 +1,44 @@
+/* This page has a single figure rather than the alternating list used by the
+   other capability pages, but it uses the same image column width so all four
+   Capabilities subpages present images at a consistent size. */
+
 .layout {
+  --media-width: clamp(260px, 30vw, 360px);
+  --media-width-stacked: 380px;
+
   display: grid;
   gap: var(--space-6);
 }
 
+.figure {
+  /* Stacked layout: same cap as MachineProfile, so the image is not stretched
+     to the full content width on tablets. */
+  max-width: var(--media-width-stacked);
+}
+
 .figure img {
+  display: block;
   width: 100%;
+  height: auto;
+  /* Inert while height is auto, but stated explicitly so the image can never
+     be stretched if a fixed height is introduced later. */
+  object-fit: contain;
+  /* No fixed aspect ratio here: this is a single tall product photograph
+     (650x688 native), so it keeps its natural proportions rather than being
+     letterboxed into the 4:3 frame the machine lists use. Never stretched. */
+  background-color: var(--color-surface-alt);
   border: var(--border-width) solid var(--color-border);
   border-radius: var(--radius-sm);
 }
 
 @media (min-width: 900px) {
   .layout {
-    /* The source photograph is tall and narrow, so it is given a fixed
-       column rather than half the page. */
-    grid-template-columns: minmax(280px, 380px) 1fr;
+    grid-template-columns: var(--media-width) 1fr;
     gap: var(--space-7);
     align-items: start;
+  }
+
+  .figure {
+    max-width: none; /* the grid track governs the width now */
   }
 }

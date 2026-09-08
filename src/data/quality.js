@@ -21,7 +21,10 @@ export const inspectionStages = [
 
 export const inspectionImage = {
   src: '/images/quality/inspection-room.jpg',
-  alt: 'Climate controlled quality inspection room at Jones Machine Company',
+  /* Source alt was "Quality Control". The "climate controlled inspection
+     room" wording belongs to the facilities list heading and is not applied
+     to this photograph by the source, so it is not asserted here. */
+  alt: 'Quality control at Jones Machine Company',
 }
 
 /** From quality_inspection.html and the facilities list heading. */

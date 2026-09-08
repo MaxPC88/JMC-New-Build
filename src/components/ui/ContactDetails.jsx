@@ -36,6 +36,10 @@ export default function ContactDetails({ className = '' }) {
             <a href={company.email.href}>{company.email.display}</a>
           </dd>
         </div>
+        <div className={styles.row}>
+          <dt className={styles.label}>Website</dt>
+          <dd className={styles.value}>{company.website.display}</dd>
+        </div>
       </dl>
     </address>
   )

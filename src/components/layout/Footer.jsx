@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom'
 import Container from '../ui/Container.jsx'
+import MadeInUsaBadge from './MadeInUsaBadge.jsx'
 import { company, formattedAddress } from '../../data/company.js'
 import { footerNav } from '../../data/navigation.js'
 import styles from './Footer.module.css'
@@ -71,7 +72,7 @@ export default function Footer() {
           <p className={styles.copyright}>
             &copy; {currentYear} {company.legalName} All rights reserved.
           </p>
-          <p className={styles.madeInUsa}>{company.madeInUsa}</p>
+          <MadeInUsaBadge className={styles.madeInUsa} />
         </div>
       </Container>
     </footer>

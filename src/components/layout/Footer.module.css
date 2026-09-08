@@ -55,6 +55,8 @@
 }
 
 .address a {
+  display: inline-block;
+  padding-block: var(--space-1);
   color: var(--color-white);
 }
 
@@ -74,14 +76,17 @@
 .linkList {
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
 }
 
 .linkList li + li {
   margin-block-start: 0;
 }
 
+/* Padded to a comfortable target. Bare text links measured 21px tall, below
+   even the 24px WCAG minimum and awkward to hit on a phone. */
 .link {
+  display: inline-block;
+  padding-block: var(--space-2);
   color: var(--color-steel-200);
   text-decoration: none;
 }
@@ -106,12 +111,10 @@
   font-size: var(--font-size-xs);
 }
 
+/* The badge supplies its own type; the footer only sets the color, since
+   .u-on-dark scopes --color-heading to white here. */
 .madeInUsa {
   color: var(--color-white);
-  font-family: var(--font-heading);
-  font-weight: var(--font-weight-semibold);
-  letter-spacing: var(--letter-spacing-wide);
-  text-transform: uppercase;
 }
 
 @media (min-width: 640px) {

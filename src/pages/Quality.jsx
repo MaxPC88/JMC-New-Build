@@ -29,7 +29,7 @@ export default function Quality() {
     <>
       <Seo
         title={title}
-        description="Quality inspection at Jones Machine Company: a climate controlled inspection room with a full-time Q.A. Manager, conformance to MIL-I-45208, ISO 9000 compliance and EU RoHS information."
+        description="A climate controlled inspection room with a full-time Q.A. Manager, conformance to MIL-I-45208, ISO 9000 compliance, and EU RoHS materials."
       />
       <PageHeader
         title="CNC Machine Shop Quality Inspection"
@@ -41,7 +41,9 @@ export default function Quality() {
           <div>
             <FactList items={qualityHighlights} layout="stacked" />
 
-            <h2 className={styles.stagesHeading}>Inspection at every stage</h2>
+            <h2 className={styles.stagesHeading}>
+              Inspections performed on all customer parts
+            </h2>
             <ol className={styles.stages}>
               {inspectionStages.map((stage) => (
                 <li key={stage}>{stage}</li>
@@ -56,10 +58,6 @@ export default function Quality() {
               loading="lazy"
               decoding="async"
             />
-            <figcaption>
-              Our climate controlled inspection room, staffed by a full-time
-              Q.A. Manager.
-            </figcaption>
           </figure>
         </div>
       </Section>

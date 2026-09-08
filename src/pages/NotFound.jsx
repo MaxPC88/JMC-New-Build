@@ -20,9 +20,8 @@ export default function NotFound() {
       <Section>
         <div className={styles.body}>
           <p>
-            The page you requested does not exist or may have been moved. Please
-            use the navigation above, or contact us directly and we will be glad
-            to help.
+            The page you requested does not exist or may have been moved.
+            Please use the navigation above, or the contact details below.
           </p>
           <div className={styles.actions}>
             <Button to="/">Return to Home</Button>

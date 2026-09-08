@@ -4,8 +4,18 @@
    ========================================================================= */
 
 html {
-  /* Anchored sections (e.g. /quality#rohs) must clear the sticky header. */
-  scroll-padding-top: var(--space-8);
+  /* Anchored sections (e.g. /quality#rohs, the equipment jump links) get
+     breathing room above them when scrolled to. */
+  scroll-padding-top: var(--space-6);
+}
+
+/* Smooth scrolling only for in-page anchor jumps — the equipment page's
+   category links, where an instant jump makes it unclear you stayed on the
+   same page. The reduced-motion block in reset.css overrides this. */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

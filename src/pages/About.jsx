@@ -47,9 +47,6 @@ export default function About() {
               height="250"
               loading="lazy"
             />
-            <figcaption>
-              Jones Machine Company, 4 Canal Street, Danvers, Massachusetts.
-            </figcaption>
           </figure>
         </div>
 

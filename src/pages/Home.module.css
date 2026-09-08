@@ -55,7 +55,14 @@
 
 .heroActions {
   margin-block-start: var(--space-6);
-  align-items: center;
+}
+
+/* Stacked buttons stay left-aligned with the heading above them rather than
+   centring, so the whole band reads on one left edge. */
+@media (min-width: 640px) {
+  .heroActions {
+    align-items: center;
+  }
 }
 
 @media (min-width: 900px) {
@@ -107,7 +114,7 @@
   padding: var(--space-4) var(--space-5);
   background-color: var(--color-surface);
   border: var(--border-width) solid var(--color-border);
-  border-left: var(--border-width-thick) solid var(--color-navy-800);
+  border-left: var(--border-width-thick) solid var(--color-border-strong);
   border-radius: var(--radius-sm);
   font-family: var(--font-heading);
   font-size: var(--font-size-md);

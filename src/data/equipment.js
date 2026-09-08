@@ -148,8 +148,7 @@ export const equipmentCategories = [
 
   {
     id: 'software',
-    name: 'Software & Programming',
-    sourceName: 'Special Features',
+    name: 'Special Features',
     items: [
       {
         qty: 1,
@@ -216,8 +215,7 @@ export const equipmentCategories = [
 
   {
     id: 'accessories',
-    name: 'Accessories & Support Equipment',
-    sourceName: 'Accessories',
+    name: 'Accessories',
     items: [
       {
         qty: 1,
@@ -259,9 +257,3 @@ export const equipmentCategories = [
     ],
   },
 ]
-
-/** Total number of listed line items, for the summary at the top of the page. */
-export const equipmentItemCount = equipmentCategories.reduce(
-  (total, category) => total + category.items.length,
-  0,
-)

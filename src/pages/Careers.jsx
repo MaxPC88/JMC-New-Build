@@ -17,7 +17,7 @@ export default function Careers() {
     <>
       <Seo
         title={title}
-        description="Jones Machine Company is always looking to hire skilled machinists in Danvers, Massachusetts. Benefits include group health insurance, a 401k profit sharing plan, and paid holidays and vacation."
+        description="Always hiring skilled machinists in Danvers, Massachusetts. Benefits include group health insurance, a 401k profit sharing plan, and paid holidays and vacation."
       />
       <PageHeader title="Join our team" intro={careersIntro} />
 

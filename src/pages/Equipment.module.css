@@ -42,17 +42,6 @@
   text-decoration-thickness: 2px;
 }
 
-.jumpCount {
-  flex-shrink: 0;
-  padding: 0 var(--space-2);
-  background-color: var(--color-steel-100);
-  border-radius: var(--radius-sm);
-  color: var(--color-text-muted);
-  font-family: var(--font-heading);
-  font-size: var(--font-size-xs);
-  font-variant-numeric: tabular-nums;
-}
-
 .categories {
   margin-block-start: var(--space-7);
 }

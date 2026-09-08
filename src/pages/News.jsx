@@ -19,7 +19,7 @@ export default function News() {
     <>
       <Seo
         title={title}
-        description="Jones Machine Company has received the NASA Group Achievement Award for its contribution to the Airborne Antarctic Ozone Equipment project, plus several supplier of the year awards."
+        description="Jones Machine Company received the NASA Group Achievement Award for the Airborne Antarctic Ozone Equipment project, plus supplier of the year awards."
       />
       <PageHeader title={title} intro={newsIntro} />
 
