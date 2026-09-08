@@ -1,0 +1,134 @@
+/* --- Intro band --------------------------------------------------------- */
+
+.hero {
+  background-color: var(--color-navy-900);
+  padding-block: var(--space-7);
+  border-bottom: var(--border-width-thick) solid var(--color-navy-700);
+}
+
+.heroInner {
+  max-width: 60rem;
+}
+
+.eyebrow {
+  color: var(--color-steel-300);
+  margin-block-end: var(--space-3);
+}
+
+.heroTitle {
+  /* Slightly larger than an interior page H1, but still bounded — the
+     headline should read as a statement, not fill the screen. */
+  font-size: clamp(1.875rem, 1.3rem + 2vw, 2.75rem);
+  max-width: 34ch;
+}
+
+.valueProps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  margin-block-start: var(--space-6);
+  padding-block-start: var(--space-5);
+  border-top: var(--border-width) solid rgba(255, 255, 255, 0.2);
+}
+
+.valueProps li {
+  margin-block-start: 0;
+  color: var(--color-white);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+}
+
+/* A short rule before each value word, so the list reads as a set of
+   credentials rather than running text. */
+.valueProps li::before {
+  content: '';
+  display: inline-block;
+  width: 1rem;
+  height: 2px;
+  margin-inline-end: var(--space-2);
+  vertical-align: middle;
+  background-color: var(--color-blue-600);
+}
+
+.heroActions {
+  margin-block-start: var(--space-6);
+  align-items: center;
+}
+
+@media (min-width: 900px) {
+  .hero {
+    padding-block: var(--space-8);
+  }
+}
+
+/* --- Introduction ------------------------------------------------------- */
+
+.introLayout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.introImage {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+@media (min-width: 900px) {
+  .introLayout {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-7);
+    align-items: center;
+  }
+
+  .introImage {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* --- Industries --------------------------------------------------------- */
+
+.industries {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+
+.industries li {
+  margin-block-start: 0;
+}
+
+.industry {
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-left: var(--border-width-thick) solid var(--color-navy-800);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+}
+
+@media (min-width: 640px) {
+  .industries {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1150px) {
+  .industries {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* --- Shared ------------------------------------------------------------- */
+
+.sectionActions {
+  margin-block-start: var(--space-6);
+}

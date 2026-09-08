@@ -1,0 +1,89 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  /* Must be able to shrink so the menu button always fits on small phones. */
+  min-width: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
+/* Solid navy monogram tile — flat, square-cornered, no bevel or gradient. */
+.mark {
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  min-width: 3.25rem;
+  padding: var(--space-2);
+  background-color: var(--color-navy-800);
+  color: var(--color-white);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.02em;
+  line-height: 1;
+}
+
+.lockup {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.name {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  letter-spacing: var(--letter-spacing-tight);
+  color: var(--color-navy-900);
+  text-transform: uppercase;
+  /* Wraps to two balanced lines on narrow screens; one line once there
+     is room for it (see the min-width query below). */
+  text-wrap: balance;
+}
+
+.since {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+  letter-spacing: var(--letter-spacing-wide);
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.logo:hover .name {
+  color: var(--color-navy-700);
+}
+
+@media (min-width: 1200px) {
+  /* Once the full navigation is shown the wordmark holds its intrinsic
+     width, so it must also stop shrinking — otherwise the non-wrapping
+     name overflows its box and collides with the first nav item. */
+  .logo {
+    flex-shrink: 0;
+  }
+
+  .lockup {
+    min-width: auto;
+  }
+
+  .mark {
+    min-width: 3.5rem;
+  }
+
+  .name {
+    font-size: var(--font-size-md);
+    white-space: nowrap;
+  }
+
+  .since {
+    white-space: nowrap;
+  }
+}

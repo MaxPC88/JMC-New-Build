@@ -1,174 +1,118 @@
 # Jones Machine Co. Website
 
-## Project Overview
+## Goal
 
-Rebuild the Jones Machine Co. website using React.
+Build a professional React website redesign for Jones Machine Co. using the existing website as the authoritative source.
 
-The existing website is:
-
+Existing website:
 https://www.jonesmachineco.com/
 
-The goal is to create a clean, professional, modernized version of the existing website while preserving the company's existing identity, information, services, and overall character.
+Modernize the presentation, not the company's identity.
 
-The website is for Jones Machine Co. and its customers. The company owners are older and prefer a traditional, professional presentation rather than an overly trendy or experimental website.
+## Content Rules
 
-## Primary Requirements
+The existing website is the source of truth for all factual company information.
 
-* Use React.
-* Create a responsive website that works well on desktop, tablet, and mobile.
-* Use all relevant content currently present on the existing Jones Machine Co. website.
-* Do not invent company information, services, certifications, capabilities, contact information, or other factual content.
-* Preserve the meaning and substance of the existing website content.
-* Improve organization, readability, spacing, typography, navigation, and visual presentation.
-* Make the site feel trustworthy, established, professional, and easy to use.
-* Keep the design relatively conservative and timeless.
-* Avoid excessive animations, unconventional layouts, flashy effects, or overly experimental design.
-* Prioritize usability and clarity over visual novelty.
-* Make important contact information and calls to action easy to find.
-* Ensure the website looks professional on large desktop screens while remaining fully responsive.
+Before implementing content, inspect the existing site and account for its meaningful:
+- Pages and navigation
+- Company information
+- Services and capabilities
+- Equipment
+- Industries served
+- Certifications
+- Contact information
+- Images, logos, and other assets
 
-## Design Direction
+Do not invent, remove, or materially alter factual information.
 
-The desired aesthetic is:
+Preserve the meaning and substance of existing content when reorganizing it.
 
-* Clean
-* Professional
-* Established
-* Industrial
-* Trustworthy
-* Simple
-* Modern but conservative
-* Easy to navigate
-* Appropriate for an established machining/manufacturing company
+Preserve the existing Jones Machine Co. branding, logo, colors, imagery, and recognizable identity where practical.
 
-The site should look like a professionally redesigned industrial business website, not a startup landing page.
+## Design
 
-### Avoid
+The site should feel:
+- Professional
+- Established
+- Industrial
+- Trustworthy
+- Clean
+- Modern but conservative
+- Easy to navigate
 
-* Excessive animations
-* Large animated hero sections
-* Excessive gradients
-* Glassmorphism
-* Neon colors
-* Extremely rounded UI elements
-* Excessive shadows
-* Overly artistic layouts
-* Trendy startup/SaaS aesthetics
-* Excessive use of icons
-* Huge amounts of whitespace that make the site difficult to navigate
-* Designs that sacrifice readability for visual style
+Use clear typography, consistent spacing, straightforward layouts, strong visual hierarchy, prominent CTAs, and easy-to-find contact information.
 
-## Content
+Avoid:
+- Startup/SaaS aesthetics
+- Excessive animation
+- Flashy effects
+- Glassmorphism
+- Neon colors
+- Excessive gradients
+- Excessive shadows or rounded UI
+- Excessive icons
+- Experimental layouts
+- Excessive whitespace
+- Visual novelty that reduces usability
 
-Use the existing Jones Machine Co. website as the authoritative source for website content:
+When uncertain, choose the simpler, more professional solution.
 
-https://www.jonesmachineco.com/
+## Technical
 
-Before implementing pages, review the existing website and identify:
+- React
+- Vite
+- Modern JavaScript
+- Semantic HTML
+- Responsive CSS
+- Reusable React components
+- Maintainable project structure
+- Minimal dependencies
 
-* Navigation structure
-* Pages
-* Company information
-* Services
-* Capabilities
-* Equipment
-* Industries served
-* Certifications
-* Contact information
-* Images
-* Logos
-* Other relevant content
+Do not put the entire website in one component.
 
-Do not remove meaningful existing content simply because it does not fit a modern design.
+Create reusable components for repeated UI such as the header, navigation, footer, buttons, cards, and common content sections.
 
-If content needs to be reorganized, preserve the original information while presenting it more clearly.
+## Responsive Design
 
-## Branding
+The site must work well on:
+- Desktop
+- Tablet
+- Mobile
 
-Preserve the existing Jones Machine Co. brand identity where practical.
-
-Use the existing logo, company name, colors, imagery, and other recognizable branding elements when available.
-
-Do not completely rebrand the company.
-
-## Layout
-
-The site should generally use:
-
-* A clear header
-* Straightforward navigation
-* Professional hero/intro sections
-* Clearly separated content sections
-* Strong typography hierarchy
-* Consistent spacing
-* Clear calls to action
-* Professional footer
-* Responsive mobile navigation
-
-Navigation should be simple enough that an older or less technically experienced customer can immediately understand how to use the site.
-
-## Technical Requirements
-
-* React
-* Vite
-* Modern JavaScript
-* Semantic HTML
-* Responsive CSS
-* Reusable React components
-* Avoid unnecessary dependencies
-* Keep the codebase organized and maintainable
-* Do not put the entire website into one React component
-* Create reusable components for repeated UI elements such as the header, navigation, footer, buttons, cards, and content sections.
+Prioritize usability and readability at every screen size.
 
 ## Accessibility
 
-Prioritize accessibility and readability.
-
-* Use sufficient color contrast.
-* Use readable font sizes.
-* Use semantic HTML elements.
-* Provide meaningful alt text for images.
-* Ensure navigation works without relying exclusively on hover.
-* Make buttons and links easy to identify.
-* Do not rely solely on color to communicate information.
+- Use semantic HTML.
+- Maintain sufficient color contrast.
+- Use readable font sizes.
+- Provide meaningful alt text for images.
+- Ensure navigation and controls are keyboard accessible.
+- Do not rely solely on hover or color.
 
 ## SEO
 
-The website should have basic SEO implemented.
-
 Each page should have:
-
-* Appropriate page title
-* Meta description
-* Proper heading hierarchy
-* Descriptive URLs
-* Image alt text
+- Appropriate page title
+- Meta description
+- Correct heading hierarchy
+- Descriptive URL
+- Meaningful image alt text
 
 Do not keyword-stuff content.
 
-## Development Process
+## Implementation Principles
 
-Before making major implementation decisions:
+- Inspect existing content before making major content or structural decisions.
+- Preserve factual information.
+- Prefer reusable components over duplicated code.
+- Keep pages visually consistent.
+- Keep the implementation simple and maintainable.
+- Avoid unnecessary dependencies or complexity.
+- Do not make major changes to company information without explicit instruction.
 
-1. Inspect the existing Jones Machine Co. website.
-2. Identify all meaningful existing content and pages.
-3. Determine an appropriate React component/page structure.
-4. Determine how existing images and other assets should be handled.
-5. Create the basic site structure.
-6. Implement the design.
-7. Test the site at desktop, tablet, and mobile widths.
-8. Check navigation and links.
-9. Check for console errors.
-10. Review the site for consistency and usability.
+Follow the requirements of the current phase/task first. Do not unnecessarily implement future phases.
 
-Do not make major changes to the company's information without being instructed to do so.
+Only perform extensive testing, refactoring, or optimization when requested or when necessary to complete the current task.
 
-## Design Philosophy
 
-The most important principle is:
-
-> Modernize the presentation, not the company's identity.
-
-The finished website should look like Jones Machine Co. invested in a professional website redesign while still feeling like the same established company.
-
-When choosing between a more creative design and a simpler professional design, choose the simpler professional design.

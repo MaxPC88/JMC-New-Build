@@ -1,0 +1,64 @@
+.utilityBar {
+  background-color: var(--color-navy-900);
+  font-size: var(--font-size-sm);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+  padding-block: var(--space-2);
+  text-align: center;
+}
+
+/* The address is redundant with the footer on small screens; the phone and
+   email links are what matter there. */
+.location {
+  display: none;
+  color: var(--color-steel-200);
+}
+
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-2) var(--space-5);
+}
+
+.contact li + li {
+  margin-block-start: 0;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding-block: var(--space-1);
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+  text-decoration: none;
+}
+
+.link:hover {
+  color: var(--color-white);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+.label {
+  color: var(--color-steel-300);
+  font-weight: var(--font-weight-normal);
+}
+
+@media (min-width: 900px) {
+  .inner {
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .location {
+    display: block;
+  }
+}

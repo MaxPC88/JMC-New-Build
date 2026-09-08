@@ -1,0 +1,49 @@
+.profile {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-6);
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+/* The first profile in a list does not need a rule above it. */
+.profile:first-child {
+  border-top: none;
+  padding-block-start: 0;
+}
+
+.media {
+  background-color: var(--color-surface-alt);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+}
+
+.media img {
+  width: 100%;
+  /* A consistent frame across photographs of differing original sizes.
+     Reserving the box also prevents layout shift as images load. */
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.title {
+  margin-block-end: var(--space-3);
+  font-size: var(--font-size-lg);
+}
+
+.body {
+  max-width: var(--content-measure);
+}
+
+@media (min-width: 900px) {
+  .profile {
+    grid-template-columns: minmax(280px, 380px) 1fr;
+    gap: var(--space-7);
+    align-items: start;
+    padding-block: var(--space-7);
+  }
+
+  .reverse .media {
+    order: 2;
+  }
+}

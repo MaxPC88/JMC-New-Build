@@ -1,0 +1,59 @@
+.header {
+  position: relative;
+  z-index: var(--z-header);
+  background-color: var(--color-surface);
+}
+
+.bar {
+  /* Anchor for the absolutely positioned mobile navigation panel. */
+  position: relative;
+  border-bottom: var(--border-width) solid var(--color-border);
+  box-shadow: var(--shadow-header);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  min-height: 72px;
+  padding-block: var(--space-3);
+}
+
+/* The navigation keeps its intrinsic width; the wordmark is the element that
+   gives way on narrow screens. */
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  flex-shrink: 0;
+}
+
+/* Below the widest breakpoint the quote call to action is still reachable:
+   the mobile panel carries its own button, and "Contact" is in the nav. */
+.cta {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .inner {
+    min-height: 88px;
+    gap: var(--space-6);
+  }
+
+  .navGroup {
+    gap: var(--space-5);
+  }
+}
+
+/* The wordmark, seven nav items and the quote button need roughly 1260px of
+   header before they fit one row, so the button appears last. */
+@media (min-width: 1280px) {
+  .inner {
+    gap: var(--space-7);
+  }
+
+  .cta {
+    display: inline-flex;
+  }
+}

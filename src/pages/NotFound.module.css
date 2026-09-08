@@ -1,0 +1,10 @@
+.body {
+  max-width: var(--content-measure);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-block-start: var(--space-5);
+}

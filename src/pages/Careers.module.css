@@ -1,0 +1,31 @@
+.layout {
+  display: grid;
+  gap: var(--space-7);
+}
+
+.actions {
+  margin-block-start: var(--space-5);
+}
+
+.benefitList {
+  display: flex;
+  flex-direction: column;
+}
+
+.benefitList li {
+  margin-block-start: 0;
+  padding-block: var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-border);
+  color: var(--color-heading);
+}
+
+.benefitList li:first-child {
+  border-top: var(--border-width) solid var(--color-border);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}

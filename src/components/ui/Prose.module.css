@@ -1,0 +1,89 @@
+/* Vertical rhythm for running copy. Spacing is expressed as top margins on
+   the element that follows, so a block never carries trailing space. */
+
+.prose > * + * {
+  margin-block-start: var(--space-4);
+}
+
+.measure {
+  max-width: var(--content-measure);
+}
+
+/* --- Headings ----------------------------------------------------------- */
+
+.prose h2,
+.prose h3,
+.prose h4 {
+  /* More space above a heading than below it, so each heading groups with the
+     copy it introduces rather than floating between blocks. */
+  margin-block-end: var(--space-3);
+}
+
+.prose > * + h2 {
+  margin-block-start: var(--space-7);
+}
+
+.prose > * + h3 {
+  margin-block-start: var(--space-6);
+}
+
+.prose > * + h4 {
+  margin-block-start: var(--space-5);
+}
+
+/* A subheading directly beneath its parent heading stays tight to it. */
+.prose h2 + h3,
+.prose h3 + h4 {
+  margin-block-start: var(--space-4);
+}
+
+/* --- Lists -------------------------------------------------------------- */
+
+.prose ul,
+.prose ol {
+  padding-inline-start: var(--space-5);
+}
+
+.prose ul {
+  list-style: disc;
+}
+
+.prose ol {
+  list-style: decimal;
+}
+
+.prose li + li {
+  margin-block-start: var(--space-2);
+}
+
+.prose li::marker {
+  color: var(--color-steel-500);
+}
+
+/* --- Other block elements ----------------------------------------------- */
+
+.prose > * + hr {
+  margin-block-start: var(--space-6);
+}
+
+.prose hr + * {
+  margin-block-start: var(--space-6);
+}
+
+/* Quiet, industrial pull quote — a left rule rather than a decorative mark. */
+.prose blockquote {
+  padding-inline-start: var(--space-5);
+  border-inline-start: var(--border-width-thick) solid var(--color-border-strong);
+  color: var(--color-text-muted);
+}
+
+.prose figure {
+  margin-block: var(--space-5);
+}
+
+/* Wide content must scroll inside its own box rather than pushing the page. */
+.prose table {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+}

@@ -1,0 +1,71 @@
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.media {
+  overflow: hidden;
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.media img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-5);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+}
+
+.titleLink {
+  color: var(--color-heading);
+  text-decoration: none;
+}
+
+.titleLink:hover {
+  color: var(--color-link-hover);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+}
+
+/* Make the whole card clickable while keeping the link's accessible name
+   on the heading text. */
+.titleLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+}
+
+.content {
+  color: var(--color-text);
+}
+
+/* Linked cards get a clear, non-color-dependent hover and focus treatment:
+   the left edge thickens in addition to the border darkening. */
+.linked {
+  border-left: var(--border-width-thick) solid var(--color-border-strong);
+  transition:
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.linked:hover {
+  border-left-color: var(--color-navy-800);
+  background-color: var(--color-surface-alt);
+}
+
+.linked:focus-within {
+  border-left-color: var(--color-navy-800);
+}

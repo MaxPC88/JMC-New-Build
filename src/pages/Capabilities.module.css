@@ -1,0 +1,50 @@
+.serviceList {
+  display: grid;
+  gap: var(--space-3);
+  grid-template-columns: 1fr;
+}
+
+.serviceList li {
+  margin-block-start: 0;
+}
+
+.service {
+  padding: var(--space-4) var(--space-5);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border);
+  border-left: var(--border-width-thick) solid var(--color-navy-800);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-heading);
+}
+
+.turnkeyLayout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 640px) {
+  .serviceList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .serviceList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .turnkeyLayout {
+    grid-template-columns: 1.3fr 1fr;
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  /* Inside the two-column turnkey block the list returns to a single column
+     so it does not compete with the vendor notes beside it. */
+  .turnkeyLayout .serviceList {
+    grid-template-columns: 1fr;
+  }
+}

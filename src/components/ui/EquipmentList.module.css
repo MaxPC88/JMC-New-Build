@@ -1,0 +1,61 @@
+.category {
+  /* Clears the in-page jump links when navigating to an anchor. */
+  scroll-margin-top: var(--space-6);
+}
+
+.category + .category {
+  margin-block-start: var(--space-7);
+}
+
+.heading {
+  padding-block-end: var(--space-3);
+  border-bottom: var(--border-width-thick) solid var(--color-navy-800);
+  font-size: var(--font-size-xl);
+}
+
+.note {
+  margin-block-start: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-sm);
+}
+
+.items {
+  margin-block-start: var(--space-4);
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: var(--space-3);
+  padding-block: var(--space-3);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.item + .item {
+  margin-block-start: 0;
+}
+
+.qty {
+  font-family: var(--font-heading);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-text-muted);
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.name {
+  color: var(--color-heading);
+  font-weight: var(--font-weight-semibold);
+}
+
+.detail {
+  color: var(--color-text);
+  font-size: var(--font-size-sm);
+}

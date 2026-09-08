@@ -1,0 +1,29 @@
+.pageHeader {
+  padding-block: var(--space-6) var(--space-5);
+  background-color: var(--color-surface-alt);
+  border-bottom: var(--border-width) solid var(--color-border);
+}
+
+.breadcrumbs {
+  margin-block-end: var(--space-4);
+}
+
+.title {
+  /* Short navy rule above the H1 — a quiet, consistent page marker. */
+  padding-block-start: var(--space-4);
+  border-top: var(--border-width-thick) solid var(--color-navy-800);
+  display: inline-block;
+}
+
+.intro {
+  max-width: var(--content-measure);
+  margin-block-start: var(--space-3);
+  color: var(--color-text);
+  font-size: var(--font-size-md);
+}
+
+@media (min-width: 900px) {
+  .pageHeader {
+    padding-block: var(--space-7) var(--space-6);
+  }
+}

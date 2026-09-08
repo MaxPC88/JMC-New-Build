@@ -1,0 +1,22 @@
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.start {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+}
+
+/* Stacked and full width on small screens — a larger, easier target than two
+   buttons sharing a narrow row. */
+@media (max-width: 639px) {
+  .stack {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

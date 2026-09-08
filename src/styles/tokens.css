@@ -1,0 +1,158 @@
+/* =========================================================================
+   Design Tokens — Jones Machine Co.
+   -------------------------------------------------------------------------
+   Single source of truth for color, type, spacing, and layout.
+   Colors are derived from the company's existing branding: the navy blue of
+   the JMC banner and building signage, industrial grays, and the flag red
+   used only for the "Proudly Made in the USA" badge.
+
+   Do not hard-code raw values in component styles. Add a token here instead.
+   ========================================================================= */
+
+:root {
+  /* ---------------------------------------------------------------------
+     Brand — navy blue, taken from the existing JMC banner and shop signage
+     --------------------------------------------------------------------- */
+  --color-navy-900: #07294f;
+  --color-navy-800: #0a3d7c; /* primary brand color */
+  --color-navy-700: #12539e;
+  --color-blue-600: #1e5fa8;
+  --color-blue-100: #e7eef7;
+
+  /* ---------------------------------------------------------------------
+     Neutrals — industrial steel grays
+     --------------------------------------------------------------------- */
+  --color-ink: #1a1d21;
+  --color-steel-700: #3f4a55;
+  --color-steel-600: #55606d;
+  --color-steel-500: #6b7785;
+  --color-steel-300: #b8c0c9;
+  --color-steel-200: #dde2e7;
+  --color-steel-100: #edf0f3;
+  --color-white: #ffffff;
+
+  /* ---------------------------------------------------------------------
+     Accent — reserved for the Made in the USA badge. Not a UI accent color.
+     --------------------------------------------------------------------- */
+  --color-flag-red: #b3261e;
+
+  /* ---------------------------------------------------------------------
+     Semantic roles — components should reference these, not the scales
+     --------------------------------------------------------------------- */
+  --color-text: var(--color-steel-700);
+  --color-text-muted: var(--color-steel-500);
+  --color-heading: var(--color-ink);
+  --color-link: var(--color-navy-800);
+  --color-link-hover: var(--color-blue-600);
+  --color-border: var(--color-steel-200);
+  --color-border-strong: var(--color-steel-300);
+  --color-surface: var(--color-white);
+  --color-surface-alt: #f4f6f8;
+  --color-surface-dark: var(--color-navy-900);
+
+  /* Focus ring. Dark surfaces override this to white via .u-on-dark. */
+  --color-focus: var(--color-navy-800);
+
+  /* ---------------------------------------------------------------------
+     Typography
+     Headings: IBM Plex Sans — engineered, sturdy, appropriate for industry.
+     Body:     Source Sans 3 — highly legible in long specification lists.
+     --------------------------------------------------------------------- */
+  --font-heading: 'IBM Plex Sans Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-body: 'Source Sans 3 Variable', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: ui-monospace, 'Cascadia Mono', Consolas, monospace;
+
+  /* Deliberately restrained scale. Body copy is large and readable;
+     headings stay proportionate rather than dominating the page. */
+  --font-size-xs: 0.8125rem; /* 13px — captions, legal */
+  --font-size-sm: 0.9375rem; /* 15px — utility bar, footer */
+  --font-size-base: 1.0625rem; /* 17px — body copy */
+  --font-size-md: 1.1875rem; /* 19px — page intros */
+  --font-size-lg: 1.375rem; /* 22px — h3 */
+  --font-size-xl: 1.625rem; /* 26px */
+
+  /* Fluid heading sizes — capped so they never overwhelm the layout */
+  --font-size-h1: clamp(1.75rem, 1.25rem + 1.6vw, 2.5rem); /* 28 → 40px */
+  --font-size-h2: clamp(1.5rem, 1.2rem + 1vw, 2rem); /* 24 → 32px */
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  --line-height-tight: 1.2;
+  --line-height-heading: 1.25;
+  --line-height-snug: 1.4;
+  --line-height-body: 1.65;
+
+  --letter-spacing-tight: -0.01em;
+  --letter-spacing-wide: 0.06em; /* small caps labels */
+
+  /* ---------------------------------------------------------------------
+     Spacing — 4px base scale
+     --------------------------------------------------------------------- */
+  --space-1: 0.25rem; /* 4 */
+  --space-2: 0.5rem; /* 8 */
+  --space-3: 0.75rem; /* 12 */
+  --space-4: 1rem; /* 16 */
+  --space-5: 1.5rem; /* 24 */
+  --space-6: 2rem; /* 32 */
+  --space-7: 3rem; /* 48 */
+  --space-8: 4rem; /* 64 */
+  --space-9: 5rem; /* 80 */
+
+  /* Vertical rhythm for page sections */
+  --section-padding-y: var(--space-7);
+  --section-padding-y-lg: var(--space-8);
+
+  /* ---------------------------------------------------------------------
+     Layout
+     --------------------------------------------------------------------- */
+  --container-max: 1320px;
+  --container-narrow: 780px; /* ~68ch measure for prose */
+  --container-padding-x: var(--space-4);
+  --content-measure: 68ch;
+
+  /* ---------------------------------------------------------------------
+     Borders, radius, elevation
+     Corners stay nearly square and shadows stay subtle: structure comes
+     from rules and background bands, not from elevation.
+     --------------------------------------------------------------------- */
+  --border-width: 1px;
+  --border-width-thick: 3px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --shadow-header: 0 1px 4px rgba(0, 0, 0, 0.12);
+
+  /* ---------------------------------------------------------------------
+     Motion — hover and focus feedback only. No entrance animation.
+     --------------------------------------------------------------------- */
+  --transition-fast: 120ms ease;
+  --transition-base: 160ms ease;
+
+  /* ---------------------------------------------------------------------
+     Layering
+     --------------------------------------------------------------------- */
+  --z-header: 100;
+  --z-mobile-nav: 200;
+  --z-skip-link: 300;
+
+  /* ---------------------------------------------------------------------
+     Breakpoints (reference only — CSS custom properties cannot be used
+     inside media queries; keep these values in sync by hand)
+       sm   640px   large phone — wider gutters, 2-column footer
+       md   900px   tablet — larger section padding
+       nav 1200px   the width at which the full 7-item primary navigation,
+                    wordmark and quote button fit on one row. Below this the
+                    header shows the mobile disclosure button instead.
+       xl  1400px   large desktop — body copy steps up to 18px
+     --------------------------------------------------------------------- */
+}
+
+/* Slightly larger body copy on large desktop displays. */
+@media (min-width: 1400px) {
+  :root {
+    --font-size-base: 1.125rem; /* 18px */
+  }
+}

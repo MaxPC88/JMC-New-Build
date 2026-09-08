@@ -1,0 +1,57 @@
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.figure img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+.facts {
+  max-width: 44rem;
+  margin-block-start: var(--space-7);
+}
+
+.columns {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.listHeading {
+  margin-block-end: var(--space-3);
+  font-size: var(--font-size-md);
+}
+
+/* Plain bordered chips — readable at a glance without relying on icons. */
+.tagList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.tagList li {
+  margin-block-start: 0;
+  padding: var(--space-2) var(--space-4);
+  background-color: var(--color-surface);
+  border: var(--border-width) solid var(--color-border-strong);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-heading);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    grid-template-columns: 1.2fr 1fr;
+    gap: var(--space-7);
+    align-items: start;
+  }
+
+  .columns {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-7);
+  }
+}

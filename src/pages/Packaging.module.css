@@ -1,0 +1,20 @@
+.layout {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.figure img {
+  width: 100%;
+  border: var(--border-width) solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+
+@media (min-width: 900px) {
+  .layout {
+    /* The source photograph is tall and narrow, so it is given a fixed
+       column rather than half the page. */
+    grid-template-columns: minmax(280px, 380px) 1fr;
+    gap: var(--space-7);
+    align-items: start;
+  }
+}

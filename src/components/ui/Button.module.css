@@ -1,0 +1,98 @@
+/* Buttons are near-rectangular and solid. No gradients, no pill shapes,
+   no drop shadows — they read as controls on an industrial site. */
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px; /* accessible touch target */
+  padding: var(--space-3) var(--space-5);
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base);
+}
+
+/* --- Variants ----------------------------------------------------------- */
+
+.primary {
+  background-color: var(--color-navy-800);
+  border-color: var(--color-navy-800);
+  color: var(--color-white);
+}
+
+.primary:hover {
+  background-color: var(--color-navy-900);
+  border-color: var(--color-navy-900);
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.secondary {
+  background-color: transparent;
+  border-color: var(--color-navy-800);
+  color: var(--color-navy-800);
+}
+
+.secondary:hover {
+  background-color: var(--color-blue-100);
+  color: var(--color-navy-900);
+  text-decoration: none;
+}
+
+/* For use on navy backgrounds (header, dark sections). */
+.onDark {
+  background-color: var(--color-white);
+  border-color: var(--color-white);
+  color: var(--color-navy-900);
+}
+
+.onDark:hover {
+  background-color: var(--color-blue-100);
+  border-color: var(--color-blue-100);
+  color: var(--color-navy-900);
+  text-decoration: none;
+}
+
+/* Tertiary action: reads as a link, but keeps the 44px touch target. */
+.text {
+  padding-inline: 0;
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--color-link);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+.text:hover {
+  color: var(--color-link-hover);
+  text-decoration-thickness: 2px;
+}
+
+/* --- Sizes -------------------------------------------------------------- */
+
+.default {
+  font-size: var(--font-size-base);
+}
+
+.large {
+  min-height: 52px;
+  padding: var(--space-4) var(--space-6);
+  font-size: var(--font-size-md);
+}
+
+.fullWidth {
+  width: 100%;
+}

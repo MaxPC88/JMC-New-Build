@@ -1,0 +1,18 @@
+/* Sticky footer: the shell fills the viewport and the footer is pushed to the
+   bottom on short pages. */
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+
+/* The skip link moves focus to <main>; no visible ring is needed on the
+   container itself since the page heading follows immediately. */
+.main:focus {
+  outline: none;
+}

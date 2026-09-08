@@ -1,0 +1,67 @@
+.nav {
+  display: none;
+}
+
+.list {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-1);
+}
+
+.list li + li {
+  margin-block-start: 0;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: var(--space-3) var(--space-3);
+  border-bottom: var(--border-width-thick) solid transparent;
+  color: var(--color-steel-700);
+  font-family: var(--font-heading);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  white-space: nowrap;
+  transition:
+    color var(--transition-base),
+    border-color var(--transition-base),
+    background-color var(--transition-base);
+}
+
+.link:hover {
+  color: var(--color-navy-800);
+  background-color: var(--color-surface-alt);
+  border-bottom-color: var(--color-border-strong);
+  text-decoration: none;
+}
+
+/* Active state uses a rule and a weight change, not color alone. */
+.active,
+.active:hover {
+  color: var(--color-navy-900);
+  font-weight: var(--font-weight-semibold);
+  border-bottom-color: var(--color-navy-800);
+}
+
+/* The nav only appears once there is room for it; below this width the
+   header shows the mobile disclosure button instead. */
+@media (min-width: 1200px) {
+  .nav {
+    display: block;
+  }
+
+  /* 16px rather than the 17px body size, so all seven items plus the
+     wordmark and the quote button fit one row without crowding. */
+  .link {
+    padding-inline: var(--space-3);
+    font-size: 1rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .link {
+    padding-inline: var(--space-4);
+  }
+}

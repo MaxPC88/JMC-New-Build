@@ -1,0 +1,20 @@
+/* =========================================================================
+   Global stylesheet entry point.
+   Imported once, from src/main.jsx. Order matters: fonts and tokens must be
+   defined before any rule that consumes them.
+
+   Everything below this file is component-scoped via CSS Modules
+   (Component.module.css), so there is no global cascade to reason about.
+   ========================================================================= */
+
+/* Self-hosted variable fonts. Weight axis only — no italic on headings and
+   no width axis — which keeps the download small. Source Sans 3 includes
+   italic because the source content uses emphasis in body copy. */
+@import '@fontsource-variable/ibm-plex-sans/wght.css';
+@import '@fontsource-variable/source-sans-3/wght.css';
+@import '@fontsource-variable/source-sans-3/wght-italic.css';
+
+@import './tokens.css';
+@import './reset.css';
+@import './base.css';
+@import './utilities.css';

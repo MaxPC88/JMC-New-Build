@@ -1,0 +1,36 @@
+.inner {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.title {
+  margin-block-end: var(--space-3);
+}
+
+.text {
+  max-width: var(--content-measure);
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.fax {
+  font-size: var(--font-size-sm);
+  color: var(--color-steel-300);
+}
+
+@media (min-width: 900px) {
+  /* Copy on the left, actions stacked on the right. */
+  .inner {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    column-gap: var(--space-7);
+  }
+
+  .actions {
+    align-items: flex-end;
+  }
+}

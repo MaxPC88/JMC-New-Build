@@ -1,0 +1,22 @@
+.header {
+  margin-block-end: var(--space-6);
+}
+
+.eyebrow {
+  margin-block-end: var(--space-2);
+  color: var(--color-navy-700);
+}
+
+.title {
+  /* Short accent rule under the section heading — the same quiet marker used
+     above page titles, so sections read as part of one system. */
+  padding-block-end: var(--space-3);
+  border-bottom: var(--border-width-thick) solid var(--color-navy-800);
+  display: inline-block;
+}
+
+.intro {
+  max-width: var(--content-measure);
+  margin-block-start: var(--space-4);
+  font-size: var(--font-size-md);
+}
