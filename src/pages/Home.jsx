@@ -16,6 +16,7 @@ import { capabilityAreas } from '../data/services.js'
 import { qualityHighlights } from '../data/quality.js'
 import { pageMeta } from '../data/seo.js'
 import styles from './Home.module.css'
+import { asset } from '../utils/asset.js'
 
 /**
  * Home page.
@@ -66,7 +67,7 @@ export default function Home() {
         <div className={styles.introLayout}>
           <img
             className={styles.introImage}
-            src={facilityImage.src}
+            src={asset(facilityImage.src)}
             alt={facilityImage.alt}
             width="686"
             height="250"

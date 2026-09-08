@@ -1,4 +1,5 @@
 import styles from './MachineProfile.module.css'
+import { asset } from '../../utils/asset.js'
 
 /**
  * A photograph paired with a heading and specification text.
@@ -28,7 +29,7 @@ export default function MachineProfile({
       id={id}
     >
       <div className={styles.media}>
-        <img src={image} alt={alt} loading="lazy" decoding="async" />
+        <img src={asset(image)} alt={alt} loading="lazy" decoding="async" />
       </div>
       <div className={styles.body}>
         <Heading className={styles.title}>{name}</Heading>

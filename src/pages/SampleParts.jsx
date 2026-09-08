@@ -6,6 +6,7 @@ import PageHeader from '../components/ui/PageHeader.jsx'
 import Section from '../components/ui/Section.jsx'
 import { sampleParts, samplePartsHeading } from '../data/products.js'
 import styles from './SampleParts.module.css'
+import { asset } from '../utils/asset.js'
 
 const title = 'Sample Parts'
 
@@ -34,7 +35,7 @@ export default function SampleParts() {
             >
               <img
                 className={styles.image}
-                src={part.src}
+                src={asset(part.src)}
                 alt={part.alt}
                 loading="lazy"
                 decoding="async"

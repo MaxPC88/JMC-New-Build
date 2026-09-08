@@ -14,6 +14,7 @@ import {
   secondaryProcesses,
 } from '../data/about.js'
 import styles from './About.module.css'
+import { asset } from '../utils/asset.js'
 
 const title = 'About Us'
 
@@ -41,7 +42,7 @@ export default function About() {
 
           <figure className={styles.figure}>
             <img
-              src={facilityImage.src}
+              src={asset(facilityImage.src)}
               alt={facilityImage.alt}
               width="686"
               height="250"

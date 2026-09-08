@@ -1,0 +1,68 @@
+name: Deploy to GitHub Pages
+
+# Builds the Vite production bundle and publishes dist/ to GitHub Pages.
+# Previously there was no workflow at all, so Pages was serving the repository
+# source (whose index.html points at /src/main.jsx, which the browser cannot
+# execute) instead of the built output — hence the blank page.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+# Required by actions/deploy-pages.
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deployment finish rather than cancelling it midway.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+        env:
+          # This repo is a project site, served from /<repo>/ rather than the
+          # domain root. Both values must match the Pages URL.
+          VITE_BASE: /JMC-New-Build/
+          VITE_SITE_URL: https://maxpc88.github.io/JMC-New-Build
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload dist as Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

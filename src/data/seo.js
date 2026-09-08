@@ -20,7 +20,11 @@ export const defaultDescription =
 export const titleSuffix = company.shortName
 
 /** Used to build canonical URLs. */
-export const siteUrl = 'https://www.jonesmachineco.com'
+/* Defaults to the company's production domain; the GitHub Pages workflow
+   overrides it via VITE_SITE_URL so canonical and og:image URLs resolve on
+   the deployed preview too. */
+export const siteUrl =
+  import.meta.env.VITE_SITE_URL ?? 'https://www.jonesmachineco.com'
 
 /**
  * Route path -> page title.

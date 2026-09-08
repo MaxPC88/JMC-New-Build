@@ -13,6 +13,7 @@ import {
   rohs,
 } from '../data/quality.js'
 import styles from './Quality.module.css'
+import { asset } from '../utils/asset.js'
 
 const title = 'Quality & Compliance'
 
@@ -53,7 +54,7 @@ export default function Quality() {
 
           <figure className={styles.figure}>
             <img
-              src={inspectionImage.src}
+              src={asset(inspectionImage.src)}
               alt={inspectionImage.alt}
               loading="lazy"
               decoding="async"

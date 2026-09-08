@@ -4,6 +4,7 @@ import PageHeader from '../components/ui/PageHeader.jsx'
 import Section from '../components/ui/Section.jsx'
 import { awards, newsIntro } from '../data/products.js'
 import styles from './News.module.css'
+import { asset } from '../utils/asset.js'
 
 const title = 'News & Awards'
 
@@ -30,7 +31,7 @@ export default function News() {
               {award.image ? (
                 <img
                   className={styles.awardImage}
-                  src={award.image}
+                  src={asset(award.image)}
                   alt={award.alt}
                   width="150"
                   height="121"

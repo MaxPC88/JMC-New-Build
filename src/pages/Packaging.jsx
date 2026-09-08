@@ -5,6 +5,7 @@ import Prose from '../components/ui/Prose.jsx'
 import Section from '../components/ui/Section.jsx'
 import { packaging } from '../data/services.js'
 import styles from './Packaging.module.css'
+import { asset } from '../utils/asset.js'
 
 const title = 'Packaging & Bagging'
 
@@ -28,7 +29,7 @@ export default function Packaging() {
         <div className={styles.layout}>
           <figure className={styles.figure}>
             <img
-              src={packaging.image}
+              src={asset(packaging.image)}
               alt={packaging.alt}
               loading="lazy"
               decoding="async"
