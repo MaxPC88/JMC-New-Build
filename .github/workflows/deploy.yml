@@ -1,9 +1,16 @@
 name: Deploy to GitHub Pages
 
 # Builds the Vite production bundle and publishes dist/ to GitHub Pages.
-# Previously there was no workflow at all, so Pages was serving the repository
-# source (whose index.html points at /src/main.jsx, which the browser cannot
-# execute) instead of the built output — hence the blank page.
+#
+# The blank page was caused by GitHub Pages being set to "Deploy from a
+# branch". That mode runs GitHub's own `pages-build-deployment` job, which
+# publishes the repository ROOT verbatim — including the source index.html,
+# whose <script src="/src/main.jsx"> the browser cannot execute. This workflow
+# built and uploaded dist/ correctly, but its artifact was never published
+# because the branch publisher owned the site.
+#
+# `configure-pages` below runs with enablement, which switches the Pages
+# source to "GitHub Actions" so this workflow's artifact is what goes live.
 
 on:
   push:
@@ -40,6 +47,14 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      # enablement:true claims the Pages site for Actions. Without it, a repo
+      # left on "Deploy from a branch" keeps publishing the source tree and
+      # this workflow's artifact is built but never served.
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
       - name: Build
         run: npm run build
         env:
@@ -48,8 +63,18 @@ jobs:
           VITE_BASE: /JMC-New-Build/
           VITE_SITE_URL: https://maxpc88.github.io/JMC-New-Build
 
-      - name: Configure Pages
-        uses: actions/configure-pages@v5
+      # Fails the run early if the build ever regresses to referencing source.
+      - name: Verify build output
+        run: |
+          test -f dist/index.html || { echo "::error::dist/index.html missing"; exit 1; }
+          if grep -q "main.jsx" dist/index.html; then
+            echo "::error::dist/index.html still references main.jsx"; exit 1
+          fi
+          grep -q "/JMC-New-Build/assets/" dist/index.html || {
+            echo "::error::assets are not prefixed with the Pages base path"; exit 1
+          }
+          echo "dist/index.html references:"
+          grep -Eo '(src|href)="[^"]*(assets|favicon)[^"]*"' dist/index.html
 
       - name: Upload dist as Pages artifact
         uses: actions/upload-pages-artifact@v3
